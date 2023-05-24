@@ -5,7 +5,7 @@ object SkinData {
         Skin(
             "1",
             "BlastX Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/blastx.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/blastx.jpg",
             "8700 VP",
             "Skin senjata Valorant 'BlastX' adalah desain yang menghadirkan nuansa mainan yang ceria dan menghibur. \n" +
                     "Dengan palet warna cerah dan aksen mencolok, skin ini menciptakan tampilan yang lucu dan menggemaskan. \n" +
@@ -14,7 +14,7 @@ object SkinData {
         Skin(
             "2",
             "Chronovoid Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/chronovoid.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/chronovoid.jpg",
             "8700 VP ",
             "Skin 'Chronovoid' adalah sebuah desain yang menggabungkan elemen futuristik dengan sentuhan supernatural, menciptakan tampilan yang misterius dan magis pada senjata-senjata di dalam permainan. Dengan palet warna gelap dan ungu yang intens, skin ini memberikan kesan yang mencolok dan menarik perhatian.  \n" +
                     "Desain 'Chronovoid' dipenuhi dengan motif-motif geometris yang kompleks dan simbol-simbol mistis. Pola-pola ini memberikan nuansa supernatural dan dimensi tambahan pada senjata, menciptakan tampilan yang memikat dan memukau para pemain.  \n" +
@@ -25,7 +25,7 @@ object SkinData {
         Skin(
             "3",
             "ElderFlame Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/elderflame.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/elderflame.jpg",
             "9900 VP ",
             "Skin 'Elderflame' adalah sebuah karya seni yang mempesona dan epik, menghidupkan senjata-senjata dalam permainan dengan estetika naga legendaris. Dengan palet warna yang kaya dan terinspirasi oleh api dan elemen naga, skin ini memberikan tampilan yang menakjubkan dan penuh kekuatan. \n" +
                     "Setiap senjata dalam koleksi 'Elderflame' memiliki desain yang terinspirasi oleh sosok naga yang kuat. Detail-detail naga yang halus dan terukir dengan cermat memberikan tampilan yang realistis dan memukau, dengan sisik-sisik yang tampak hidup dan api yang melahap di sekitarnya.  \n" +
@@ -36,7 +36,7 @@ object SkinData {
         Skin(
             "4",
             "Ion Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/ion.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/ion.jpg",
             "7100 VP",
             "Skin senjata Valorant 'Ion' adalah desain yang futuristik dan teknologis, memberikan tampilan yang sleek dan modern pada senjata-senjata dalam permainan. Dengan palet warna biru neon dan hitam yang kontras, skin ini menciptakan kesan yang memikat dan mengesankan.  \n" +
                     "Desain 'Ion' menampilkan bentuk-bentuk geometris yang tajam dan garis-garis yang bersih, menciptakan tampilan yang aerodinamis dan high-tech. Setiap detail pada senjata terlihat presisi dan efisien, memberikan kesan bahwa senjata ini adalah perangkat canggih dari masa depan.  \n" +
@@ -47,7 +47,7 @@ object SkinData {
         Skin(
             "5",
             "Oni Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/oni_v1.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/oni_v1.jpg",
             "7100 VP",
             "Skin 'Oni' dalam Valorant adalah desain yang menakutkan dan misterius. Dengan motif Jepang yang kuat dan palet warna yang gelap, \n" +
                     "skin ini menciptakan tampilan yang menyeramkan dan mengesankan. \n" +
@@ -57,7 +57,7 @@ object SkinData {
         Skin(
             "6",
             "Protocol 781-A Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/protocol.jpg?raw=true?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/protocol.jpg",
             "9900 VP",
 
             "Skin 'Protocol 781-A' adalah sebuah desain yang futuristik dan militan, menampilkan senjata dalam estetika yang tangguh dan fungsional. Dengan palet warna yang terinspirasi oleh warna metalik dan teknologi canggih, skin ini memberikan tampilan yang kuat dan modern pada senjata-senjata di dalam permainan.  \n" +
@@ -69,7 +69,7 @@ object SkinData {
         Skin(
             "7",
             "Prelude to Chaos Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/prelude.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/prelude.jpg",
             "8700 VP",
             "Skin 'Prelude to Chaos' adalah kombinasi yang sempurna antara keindahan visual, \n" +
                     "perpaduan warna yang mencolok, dan elemen desain yang menggugah perasaan. \n" +
@@ -79,7 +79,7 @@ object SkinData {
         Skin(
             "8",
             "Prime Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/prime_v1.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/prime_v1.jpg",
             "7100 VP",
 
             "Skin 'Prime' adalah sebuah desain yang mewah dan bergaya, memberikan sentuhan futuristik pada senjata-senjata dalam permainan. Dengan palet warna silver dan hitam yang elegan, skin ini menampilkan tampilan yang mengesankan dan mengkilap. \n" +
@@ -90,7 +90,7 @@ object SkinData {
         Skin(
             "9",
             "Reaver Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/reaver_v1.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/reaver_v1.jpg",
             "7100 VP",
             "Skin 'Reaver' dalam Valorant adalah desain yang menghadirkan aura kegelapan dan kekuatan. Dengan palet warna gelap dan aksen merah yang mencolok, skin ini menciptakan tampilan yang menyeramkan dan mengesankan.\n" +
                     "Detail-detail seperti tengkorak dan elemen gotik memberikan sentuhan yang mengintimidasi dan misterius pada senjata. Suara yang dihasilkan oleh 'Reaver' juga memperkuat kesan yang menakutkan dan mempesona. \n" +
@@ -99,7 +99,7 @@ object SkinData {
         Skin(
             "10",
             "RGX Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/rgx_v1.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/rgx_v1.jpg",
             "8700 VP",
             "Skin 'RGX' dalam Valorant adalah desain yang futuristik dan teknologis. Dengan palet warna cerah dan aksen neon yang mencolok, skin ini menciptakan tampilan yang modern dan menarik. \n" +
                     "Detail-detail seperti garis-garis geometris dan tekstur metalik memberikan kesan yang sleek dan high-tech pada senjata. \n" +
@@ -108,7 +108,7 @@ object SkinData {
         Skin(
             "11",
             "Spectrum Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/spectrum.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/spectrum.jpg",
             "10700 VP",
             "Skin 'Spectrum' dalam Valorant adalah hasil kolaborasi dengan Zedd, yang menghadirkan pengalaman audio yang luar biasa. \n" +
                     "Dengan palet warna yang mencolok dan beragam, skin ini menciptakan tampilan yang menarik dan mencuri perhatian. \n" +
@@ -119,7 +119,7 @@ object SkinData {
         Skin(
             "12",
             "Ruination Bundle",
-            "https://github.com/NoisyBoy29/image/blob/master/app/src/main/res/drawable/ruination.jpg?raw=true",
+            "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/ruination.jpg",
             "8700 VP",
             "Skin 'Ruination' dalam Valorant adalah desain yang mencekam dan menghadirkan aura kehancuran. \n" +
                     "Dengan palet warna gelap dan aksen ungu yang menyala, skin ini menciptakan tampilan yang menyeramkan dan mempesona. \n" +
