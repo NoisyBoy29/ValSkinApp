@@ -20,6 +20,8 @@ import com.compose.valskinapp.component.ScrollToTopButton
 import com.compose.valskinapp.component.SearchBar
 import com.compose.valskinapp.component.SkinListItem
 import com.compose.valskinapp.data.SkinRepository
+import com.compose.valskinapp.screen.home.HomeAppViewModel
+import com.compose.valskinapp.screen.home.ViewModelFactory
 import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 import kotlinx.coroutines.launch
 

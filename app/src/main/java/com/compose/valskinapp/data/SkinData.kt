@@ -59,7 +59,6 @@ object SkinData {
             "Protocol 781-A Bundle",
             "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/protocol.jpg",
             "9900 VP",
-
             "Skin 'Protocol 781-A' adalah sebuah desain yang futuristik dan militan, menampilkan senjata dalam estetika yang tangguh dan fungsional. Dengan palet warna yang terinspirasi oleh warna metalik dan teknologi canggih, skin ini memberikan tampilan yang kuat dan modern pada senjata-senjata di dalam permainan.  \n" +
                     "Dengan detail yang tajam dan garis-garis yang bersih, 'Protocol 781-A' menampilkan desain yang ergonomis dan aerodinamis. Setiap bagian senjata terlihat efisien dan fungsional, memberikan kesan bahwa senjata ini adalah alat tempur yang serius dan siap digunakan di medan pertempuran.  \n" +
                     "Pola-pola khas dan simbol-simbol futuristik yang diintegrasikan pada skin ini memberikan sentuhan teknologi yang maju. Dengan tambahan efek sinar dan bayangan yang halus, skin ini menambah dimensi visual dan kedalaman pada senjata, menciptakan tampilan yang mengesankan dan serba-serbi.  \n" +
@@ -81,7 +80,6 @@ object SkinData {
             "Prime Bundle",
             "https://raw.githubusercontent.com/NoisyBoy29/image/master/app/src/main/res/drawable/prime_v1.jpg",
             "7100 VP",
-
             "Skin 'Prime' adalah sebuah desain yang mewah dan bergaya, memberikan sentuhan futuristik pada senjata-senjata dalam permainan. Dengan palet warna silver dan hitam yang elegan, skin ini menampilkan tampilan yang mengesankan dan mengkilap. \n" +
                     "Setiap senjata dalam koleksi 'Prime' ditandai dengan garis-garis yang bersih dan geometris yang memberikan kesan modern dan high-tech. Desain minimalis ini menjadikan senjata terlihat ramping dan mempesona, dengan sentuhan metalik yang menambahkan kesan eksklusivitas.  \n" +
                     "Efek sinar dan refleksi cahaya pada skin 'Prime' memberikan kesan kemewahan yang tak tertandingi. Kilauan dan pantulan yang menarik pada permukaan senjata menambahkan dimensi visual yang menawan, menciptakan tampilan yang mencolok dan mewah.  \n" +
