@@ -1,5 +1,6 @@
 package com.compose.valskinapp.screen.detail
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -16,7 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.compose.AsyncImage
+import coil.compose.rememberImagePainter
 import com.compose.valskinapp.data.SkinRepository
 import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 
@@ -37,13 +38,13 @@ fun DetailSkin(
                 .padding(paddingValues)
                 .verticalScroll(rememberScrollState())
         ) {
-            AsyncImage(
-                model = skinData.photoUrl,
+            Image(
+                painter = rememberImagePainter(skinData.photoUrl),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(200.dp)
+                    .height(350.dp)
             )
             Divider(
                 color = MaterialTheme.colorScheme.onBackground,
