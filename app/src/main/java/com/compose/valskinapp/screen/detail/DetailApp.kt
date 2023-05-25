@@ -1,63 +1,92 @@
 package com.compose.valskinapp.screen.detail
 
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.AsyncImage
 import com.compose.valskinapp.data.SkinRepository
+import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailSkinApp(
+fun DetailSkin(
     modifier: Modifier = Modifier,
-    idBook: String,
-    detailViewModel: DetailAppViewModel = viewModel(factory = DetailViewModelFactory(SkinRepository())),
+    idSkin: String,
+    detailViewModel: DetailViewModel = viewModel(factory = DetailViewModelFactory(SkinRepository())),
 ){
-    val bookData by detailViewModel.getBookData(idBook).collectAsState()
+    val skinData by detailViewModel.getSkinData(idSkin).collectAsState()
 
-    Scaffold{paddingValue ->
+    Scaffold{paddingValues ->
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = modifier
                 .fillMaxSize()
-                .padding(paddingValue)
+                .padding(paddingValues)
                 .verticalScroll(rememberScrollState())
         ) {
             AsyncImage(
-                model = bookData.photoUrl,
+                model = skinData.photoUrl,
                 contentDescription = null,
-                contentScale = ContentScale.Crop,
+                contentScale = ContentScale.FillWidth,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(350.dp)
+                    .height(200.dp)
             )
-            Spacer(modifier = Modifier.padding(14.dp))
+            Divider(
+                color = MaterialTheme.colorScheme.onBackground,
+                thickness = 5.dp
+            )
             Text(
-                text = bookData.name,
-                style = MaterialTheme.typography.h2,
+                text = skinData.name,
+                style = MaterialTheme.typography.headlineMedium,
                 fontSize = 30.sp,
-                textAlign = TextAlign.Start,
+                textAlign = TextAlign.Center,
                 modifier = Modifier
                     .padding(horizontal = 24.dp)
                     .fillMaxWidth()
             )
             Divider(
-                color = MaterialTheme.colors.onBackground,
-                thickness = 1.dp
+                color = MaterialTheme.colorScheme.onBackground,
+                thickness = 5.dp
             )
+            Spacer(modifier = Modifier.padding(8.dp))
             Text(
-                text = bookData.descripstion,
+                text = skinData.description,
                 lineHeight = 30.sp,
+                textAlign = TextAlign.Justify,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 24.dp)
                     .alpha(0.7f)
             )
+            Spacer(modifier = Modifier.padding(14.dp))
+            Text(
+                text = skinData.price,
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.padding(horizontal = 24.dp)
+            )
+
         }
     }
 }
+
 @Preview(showBackground = true)
 @Composable
 fun ProfileScreenPreview() {
-    JetBooksTheme {
-        DetailBook(idBook = "1")
+    ValSkinAppTheme {
+        DetailSkin(idSkin = "1")
     }
 }

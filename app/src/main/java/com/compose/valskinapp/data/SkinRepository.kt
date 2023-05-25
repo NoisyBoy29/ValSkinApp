@@ -10,4 +10,8 @@ class SkinRepository {
             it.name.contains(query, ignoreCase = true)
         }
     }
+
+    fun getSkinsId(id :String) : Skin =  SkinData.skins.find{
+        it.id == id
+    } as Skin
 }
