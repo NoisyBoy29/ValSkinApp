@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.compose.valskinapp.component.PriceHeader
+import com.compose.valskinapp.component.BundleHeader
 import com.compose.valskinapp.component.ScrollToTopButton
 import com.compose.valskinapp.component.SearchBar
 import com.compose.valskinapp.component.SkinListItem
@@ -53,7 +53,7 @@ fun ValSkinApp(
             }
             groupedSkin.forEach { (initial, skins) ->
                 stickyHeader {
-                    PriceHeader(initial)
+                    BundleHeader(initial)
                 }
                 items(skins, key = { it.id }) { skin ->
                     SkinListItem(
