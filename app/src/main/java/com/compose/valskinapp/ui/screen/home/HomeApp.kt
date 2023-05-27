@@ -5,11 +5,12 @@ import androidx.compose.animation.*
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material3.*
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,8 +28,9 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun ValSkinApp(
+fun HomeApp(
     modifier: Modifier = Modifier,
+    navtoDetail: (String) -> Unit,
     viewModel: HomeAppViewModel = viewModel (factory = ViewModelFactory(SkinRepository()))
 ) {
     val groupedSkin by viewModel.groupedSkin.collectAsState()
@@ -48,7 +50,7 @@ fun ValSkinApp(
                 SearchBar(
                     query = query,
                     onQueryChange = viewModel::search,
-                    modifier = Modifier.background(MaterialTheme.colorScheme.primary)
+                    modifier = Modifier.background(MaterialTheme.colors.primary)
                 )
             }
             groupedSkin.forEach { (initial, skins) ->
@@ -63,6 +65,7 @@ fun ValSkinApp(
                         modifier = Modifier
                             .fillMaxWidth()
                             .animateItemPlacement(tween(durationMillis = 100))
+                            .clickable { navtoDetail(skin.id) }
                     )
                 }
             }
@@ -88,8 +91,8 @@ fun ValSkinApp(
 
 @Preview(showBackground = true)
 @Composable
-fun ValSkinAppPreview() {
+fun HomeAppPreview() {
     ValSkinAppTheme() {
-        ValSkinApp()
+        HomeApp(navtoDetail = {})
     }
 }
