@@ -1,4 +1,4 @@
-package com.compose.valskinapp
+package com.compose.valskinapp.ui.screen.home
 
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.animation.*
@@ -62,10 +62,9 @@ fun HomeApp(
                         name = skin.name,
                         photoUrl = skin.photoUrl,
                         price = skin.price,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .animateItemPlacement(tween(durationMillis = 100))
-                            .clickable { navtoDetail(skin.id) }
+                        modifier = Modifier.clickable {
+                            navtoDetail(skin.id)
+                        }
                     )
                 }
             }
@@ -92,7 +91,7 @@ fun HomeApp(
 @Preview(showBackground = true)
 @Composable
 fun HomeAppPreview() {
-    ValSkinAppTheme() {
+    ValSkinAppTheme {
         HomeApp(navtoDetail = {})
     }
 }

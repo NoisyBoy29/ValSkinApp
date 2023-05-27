@@ -6,13 +6,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.compose.valskinapp.ui.component.BottomBar
 import com.compose.valskinapp.ui.navigation.Screen
 import com.compose.valskinapp.ui.screen.detail.DetailApp
 import com.compose.valskinapp.ui.screen.favorite.FavoriteApp
+import com.compose.valskinapp.ui.screen.home.HomeApp
 import com.compose.valskinapp.ui.screen.profile.ProfileScreen
 import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 
@@ -35,15 +38,16 @@ fun ValSkinApp(
             composable(Screen.Home.route) {
                 HomeApp(
                     navtoDetail = { skinId ->
-                        navController.navigate(Screen.Detail.createRoute(skinId))
+                        navController.navigate(Screen.DetailSkin.createRoute(skinId))
                     }
                 )
             }
             composable(
-                route = Screen.Detail.route
-            ) {
-                val id = it.arguments?.getString("skinId") ?: "1"
-                DetailApp(idSkin = id)
+                route = Screen.DetailSkin.route,
+                arguments = listOf(navArgument("skinId") { type = NavType.StringType })
+            ) { backStackEntry ->
+                val skinId = backStackEntry.arguments?.getString("skinId") ?: ""
+                DetailApp(idSkin = skinId)
             }
             composable(Screen.Favorite.route) {
                 FavoriteApp()
@@ -54,6 +58,7 @@ fun ValSkinApp(
         }
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
