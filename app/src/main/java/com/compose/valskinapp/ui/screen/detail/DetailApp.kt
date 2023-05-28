@@ -98,12 +98,23 @@ fun DetailApp(
                     .alpha(0.7f)
             )
             Spacer(modifier = Modifier.padding(14.dp))
-            Text(
-                text = "Price " + skinData.price,
-                style = MaterialTheme.typography.body1,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(horizontal = 24.dp)
-            )
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+            ) {
+                Divider(
+                    color = MaterialTheme.colors.onBackground,
+                    thickness = 5.dp
+                )
+                Spacer(modifier = Modifier.padding(8.dp))
+                Text(
+                    text = "Price " + skinData.price,
+                    style = MaterialTheme.typography.h6,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.align(Alignment.Center)
+                )
+            }
         }
     }
 }
