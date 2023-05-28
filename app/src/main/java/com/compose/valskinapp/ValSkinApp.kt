@@ -47,7 +47,7 @@ fun ValSkinApp(
                 arguments = listOf(navArgument("skinId") { type = NavType.StringType })
             ) { backStackEntry ->
                 val skinId = backStackEntry.arguments?.getString("skinId") ?: ""
-                DetailApp(idSkin = skinId)
+                DetailApp(idSkin = skinId, navController = navController)
             }
             composable(Screen.Favorite.route) {
                 FavoriteApp()

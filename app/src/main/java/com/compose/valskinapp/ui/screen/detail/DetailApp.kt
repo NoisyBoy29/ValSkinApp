@@ -5,9 +5,13 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Divider
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -20,6 +24,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
 import com.compose.valskinapp.data.SkinRepository
 import com.compose.valskinapp.screen.detail.DetailViewModel
@@ -30,26 +36,40 @@ import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 fun DetailApp(
     modifier: Modifier = Modifier,
     idSkin: String,
+    navController: NavHostController,
     detailViewModel: DetailViewModel = viewModel(factory = DetailViewModelFactory(SkinRepository())),
-){
+) {
     val skinData by detailViewModel.getSkinData(idSkin).collectAsState()
 
-    Scaffold{paddingValues ->
+    Scaffold { paddingValues ->
         Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
             modifier = modifier
                 .fillMaxSize()
-                .padding(paddingValues)
                 .verticalScroll(rememberScrollState())
         ) {
-            Image(
-                painter = rememberAsyncImagePainter(skinData.photoUrl),
-                contentDescription = null,
-                contentScale = ContentScale.FillWidth,
+            Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(350.dp)
-            )
+            ) {
+                Image(
+                    painter = rememberAsyncImagePainter(skinData.photoUrl),
+                    contentDescription = null,
+                    contentScale = ContentScale.FillWidth,
+                    modifier = Modifier.fillMaxSize()
+                )
+                IconButton(
+                    onClick = { navController.popBackStack() },
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .align(Alignment.TopStart)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.ArrowBack,
+                        contentDescription = "Back"
+                    )
+                }
+            }
             Divider(
                 color = MaterialTheme.colors.onBackground,
                 thickness = 5.dp
@@ -81,16 +101,19 @@ fun DetailApp(
             Text(
                 text = "Price " + skinData.price,
                 style = MaterialTheme.typography.body1,
+                textAlign = TextAlign.Center,
                 modifier = Modifier.padding(horizontal = 24.dp)
             )
         }
     }
 }
 
+
 @Preview(showBackground = true)
 @Composable
 fun DetailAppPreview() {
     ValSkinAppTheme {
-        DetailApp(idSkin = "1")
+        val navController = rememberNavController()
+        DetailApp(idSkin = "1", navController = navController)
     }
 }
