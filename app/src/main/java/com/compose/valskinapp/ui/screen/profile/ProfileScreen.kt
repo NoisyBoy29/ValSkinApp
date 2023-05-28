@@ -22,7 +22,10 @@ import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 @Composable
 fun ProfileScreen() {
     Column(
-        modifier = Modifier.padding(80.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(40.dp),
+        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
@@ -39,7 +42,7 @@ fun ProfileScreen() {
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h2.copy(
+            style = MaterialTheme.typography.h6.copy(
                 fontWeight = FontWeight.ExtraBold
             ),
             modifier = Modifier.fillMaxWidth()
@@ -48,7 +51,7 @@ fun ProfileScreen() {
         Text(
             text = "Irawanaufal29209@gmail.com",
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h2.copy(
+            style = MaterialTheme.typography.h6.copy(
                 fontWeight = FontWeight.Bold
             ),
             modifier = Modifier.fillMaxWidth()
