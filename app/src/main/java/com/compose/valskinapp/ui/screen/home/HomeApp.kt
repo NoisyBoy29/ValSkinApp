@@ -2,7 +2,6 @@ package com.compose.valskinapp.ui.screen.home
 
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.animation.*
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.compose.valskinapp.component.BundleHeader
 import com.compose.valskinapp.component.ScrollToTopButton
 import com.compose.valskinapp.component.SearchBar
-import com.compose.valskinapp.component.SkinListItem
+import com.compose.valskinapp.ui.component.SkinListItem
 import com.compose.valskinapp.data.SkinRepository
 import com.compose.valskinapp.screen.home.HomeAppViewModel
 import com.compose.valskinapp.screen.home.ViewModelFactory

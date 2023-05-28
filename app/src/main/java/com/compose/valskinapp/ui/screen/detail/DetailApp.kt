@@ -79,11 +79,10 @@ fun DetailApp(
             )
             Spacer(modifier = Modifier.padding(14.dp))
             Text(
-                text = skinData.price,
+                text = "Price " + skinData.price,
                 style = MaterialTheme.typography.body1,
                 modifier = Modifier.padding(horizontal = 24.dp)
             )
-
         }
     }
 }
