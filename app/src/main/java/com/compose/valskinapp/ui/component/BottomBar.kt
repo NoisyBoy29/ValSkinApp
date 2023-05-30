@@ -5,7 +5,6 @@ import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
@@ -35,11 +34,6 @@ fun BottomBar(
                 title = stringResource(R.string.menu_home),
                 icon = Icons.Default.Home,
                 screen = Screen.Home
-            ),
-            NavigationItem(
-                title = stringResource(R.string.menu_favorite),
-                icon = Icons.Default.Favorite,
-                screen = Screen.Favorite
             ),
             NavigationItem(
                 title = stringResource(R.string.menu_profile),

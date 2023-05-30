@@ -14,7 +14,6 @@ import androidx.navigation.navArgument
 import com.compose.valskinapp.ui.component.BottomBar
 import com.compose.valskinapp.ui.navigation.Screen
 import com.compose.valskinapp.ui.screen.detail.DetailApp
-import com.compose.valskinapp.ui.screen.favorite.FavoriteApp
 import com.compose.valskinapp.ui.screen.home.HomeApp
 import com.compose.valskinapp.ui.screen.profile.ProfileScreen
 import com.compose.valskinapp.ui.theme.ValSkinAppTheme
@@ -49,11 +48,8 @@ fun ValSkinApp(
                 val skinId = backStackEntry.arguments?.getString("skinId") ?: ""
                 DetailApp(idSkin = skinId, navController = navController)
             }
-            composable(Screen.Favorite.route) {
-                FavoriteApp()
-            }
             composable(Screen.Profile.route) {
-                ProfileScreen()
+                ProfileScreen(navController = navController)
             }
         }
     }
