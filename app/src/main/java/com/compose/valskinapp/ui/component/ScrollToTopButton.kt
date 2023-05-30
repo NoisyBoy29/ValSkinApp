@@ -17,8 +17,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ScrollToTopButton(
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    onClick: () -> Unit, modifier: Modifier = Modifier
 ) {
     Button(
         onClick = onClick,
@@ -27,8 +26,7 @@ fun ScrollToTopButton(
             .clip(shape = CircleShape)
             .size(56.dp),
         colors = ButtonDefaults.buttonColors(
-            backgroundColor = Color.White,
-            contentColor = MaterialTheme.colors.primary
+            backgroundColor = Color.White, contentColor = MaterialTheme.colors.primary
         )
     ) {
         Icon(

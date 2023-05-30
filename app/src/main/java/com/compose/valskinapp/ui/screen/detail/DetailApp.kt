@@ -65,14 +65,12 @@ fun DetailApp(
                         .align(Alignment.TopStart)
                 ) {
                     Icon(
-                        imageVector = Icons.Default.ArrowBack,
-                        contentDescription = "Back"
+                        imageVector = Icons.Default.ArrowBack, contentDescription = "Back"
                     )
                 }
             }
             Divider(
-                color = MaterialTheme.colors.onBackground,
-                thickness = 5.dp
+                color = MaterialTheme.colors.onBackground, thickness = 5.dp
             )
             Text(
                 text = skinData.name,
@@ -84,8 +82,7 @@ fun DetailApp(
                     .fillMaxWidth()
             )
             Divider(
-                color = MaterialTheme.colors.onBackground,
-                thickness = 5.dp
+                color = MaterialTheme.colors.onBackground, thickness = 5.dp
             )
             Spacer(modifier = Modifier.padding(8.dp))
             Text(
@@ -104,8 +101,7 @@ fun DetailApp(
                     .padding(horizontal = 24.dp)
             ) {
                 Divider(
-                    color = MaterialTheme.colors.onBackground,
-                    thickness = 5.dp
+                    color = MaterialTheme.colors.onBackground, thickness = 5.dp
                 )
                 Spacer(modifier = Modifier.padding(8.dp))
                 Text(

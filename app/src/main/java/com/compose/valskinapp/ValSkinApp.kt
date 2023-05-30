@@ -26,8 +26,7 @@ fun ValSkinApp(
     Scaffold(
         bottomBar = {
             BottomBar(navController)
-        },
-        modifier = modifier
+        }, modifier = modifier
     ) { innerPadding ->
         NavHost(
             navController = navController,
@@ -35,11 +34,9 @@ fun ValSkinApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Home.route) {
-                HomeApp(
-                    navtoDetail = { skinId ->
-                        navController.navigate(Screen.DetailSkin.createRoute(skinId))
-                    }
-                )
+                HomeApp(navtoDetail = { skinId ->
+                    navController.navigate(Screen.DetailSkin.createRoute(skinId))
+                })
             }
             composable(
                 route = Screen.DetailSkin.route,
@@ -54,7 +51,6 @@ fun ValSkinApp(
         }
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable

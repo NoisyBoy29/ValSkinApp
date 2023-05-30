@@ -27,51 +27,56 @@ import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 
 @Composable
 fun ProfileScreen(
-    navController: NavHostController,) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(40.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+    navController: NavHostController,
+) {
+    Box(
+        modifier = Modifier.fillMaxSize()
     ) {
-        IconButton(
-            onClick = { navController.popBackStack() },
-            modifier = Modifier.align(Alignment.Start)
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(40.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Icon(
-                imageVector = Icons.Default.ArrowBack,
-                contentDescription = "Back"
+            IconButton(
+                onClick = { navController.popBackStack() },
+                modifier = Modifier.align(Alignment.Start)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = "Back"
+                )
+            }
+            Image(
+                painter = painterResource(R.drawable.fotonaufal),
+                contentDescription = "Profile",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(180.dp)
+                    .clip(CircleShape)
+            )
+            Spacer(modifier = Modifier.padding(16.dp))
+            Text(
+                text = "Naufal Maulana Al-Ghifari Irawan",
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.h6.copy(
+                    fontWeight = FontWeight.ExtraBold
+                ),
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.padding(8.dp))
+            Text(
+                text = "Irawanaufal29209@gmail.com",
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.h6.copy(
+                    fontWeight = FontWeight.Bold
+                ),
+                modifier = Modifier.fillMaxWidth()
             )
         }
-        Image(
-            painter = painterResource(R.drawable.fotonaufal),
-            contentDescription = "Profile",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .size(180.dp)
-                .clip(CircleShape)
-        )
-        Spacer(modifier = Modifier.padding(16.dp))
-        Text(
-            text = "Naufal Maulana Al-Ghifari Irawan",
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h6.copy(
-                fontWeight = FontWeight.ExtraBold
-            ),
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(modifier = Modifier.padding(8.dp))
-        Text(
-            text = "Irawanaufal29209@gmail.com",
-            textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.h6.copy(
-                fontWeight = FontWeight.Bold
-            ),
-            modifier = Modifier.fillMaxWidth()
-        )
     }
 }
 

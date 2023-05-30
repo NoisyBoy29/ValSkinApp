@@ -21,8 +21,7 @@ import com.compose.valskinapp.ui.navigation.Screen
 
 @Composable
 fun BottomBar(
-    navController: NavHostController,
-    modifier: Modifier = Modifier
+    navController: NavHostController, modifier: Modifier = Modifier
 ) {
     BottomNavigation(
         modifier = modifier
@@ -43,13 +42,11 @@ fun BottomBar(
         )
         BottomNavigation {
             navigationItems.map { item ->
-                BottomNavigationItem(
-                    icon = {
-                        Icon(
-                            imageVector = item.icon,
-                            contentDescription = item.title
-                        )
-                    },
+                BottomNavigationItem(icon = {
+                    Icon(
+                        imageVector = item.icon, contentDescription = item.title
+                    )
+                },
                     label = { Text(item.title) },
                     selected = currentRoute == item.screen.route,
                     onClick = {
@@ -60,8 +57,7 @@ fun BottomBar(
                             restoreState = true
                             launchSingleTop = true
                         }
-                    }
-                )
+                    })
             }
         }
     }

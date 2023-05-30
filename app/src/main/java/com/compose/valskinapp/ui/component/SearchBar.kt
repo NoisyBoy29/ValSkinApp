@@ -21,17 +21,14 @@ import com.compose.valskinapp.R
 
 @Composable
 fun SearchBar(
-    query: String,
-    onQueryChange: (String) -> Unit,
-    modifier: Modifier = Modifier
+    query: String, onQueryChange: (String) -> Unit, modifier: Modifier = Modifier
 ) {
     TextField(
         value = query,
         onValueChange = onQueryChange,
         leadingIcon = {
             Icon(
-                imageVector = Icons.Default.Search,
-                contentDescription = null
+                imageVector = Icons.Default.Search, contentDescription = null
             )
         },
         colors = TextFieldDefaults.textFieldColors(

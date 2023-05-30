@@ -30,7 +30,7 @@ import kotlinx.coroutines.launch
 fun HomeApp(
     modifier: Modifier = Modifier,
     navtoDetail: (String) -> Unit,
-    viewModel: HomeAppViewModel = viewModel (factory = ViewModelFactory(SkinRepository()))
+    viewModel: HomeAppViewModel = viewModel(factory = ViewModelFactory(SkinRepository()))
 ) {
     val groupedSkin by viewModel.groupedSkin.collectAsState()
     val query by viewModel.query
@@ -42,8 +42,7 @@ fun HomeApp(
             derivedStateOf { listState.firstVisibleItemIndex > 0 }
         }
         LazyColumn(
-            state = listState,
-            contentPadding = PaddingValues(bottom = 80.dp)
+            state = listState, contentPadding = PaddingValues(bottom = 80.dp)
         ) {
             item {
                 SearchBar(
@@ -57,14 +56,12 @@ fun HomeApp(
                     BundleHeader(initial)
                 }
                 items(skins, key = { it.id }) { skin ->
-                    SkinListItem(
-                        name = skin.name,
+                    SkinListItem(name = skin.name,
                         photoUrl = skin.photoUrl,
                         price = skin.price,
                         modifier = Modifier.clickable {
                             navtoDetail(skin.id)
-                        }
-                    )
+                        })
                 }
             }
         }
@@ -76,13 +73,11 @@ fun HomeApp(
                 .padding(bottom = 30.dp)
                 .align(Alignment.BottomCenter)
         ) {
-            ScrollToTopButton(
-                onClick = {
-                    scope.launch {
-                        listState.scrollToItem(index = 0)
-                    }
+            ScrollToTopButton(onClick = {
+                scope.launch {
+                    listState.scrollToItem(index = 0)
                 }
-            )
+            })
         }
     }
 }

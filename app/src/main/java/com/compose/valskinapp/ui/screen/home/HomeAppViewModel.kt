@@ -9,12 +9,9 @@ import com.compose.valskinapp.data.SkinRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-class HomeAppViewModel (private val repository: SkinRepository) : ViewModel() {
-    private val _groupedSkin = MutableStateFlow(
-        repository.getSkin()
-            .sortedBy { it.name }
-            .groupBy { it.name[0] }
-    )
+class HomeAppViewModel(private val repository: SkinRepository) : ViewModel() {
+    private val _groupedSkin =
+        MutableStateFlow(repository.getSkin().sortedBy { it.name }.groupBy { it.name[0] })
     val groupedSkin: StateFlow<Map<Char, List<Skin>>> get() = _groupedSkin
 
     private val _query = mutableStateOf("")
@@ -22,9 +19,8 @@ class HomeAppViewModel (private val repository: SkinRepository) : ViewModel() {
 
     fun search(newQuery: String) {
         _query.value = newQuery
-        _groupedSkin.value = repository.searchSkin(_query.value)
-            .sortedBy { it.name }
-            .groupBy { it.name[0] }
+        _groupedSkin.value =
+            repository.searchSkin(_query.value).sortedBy { it.name }.groupBy { it.name[0] }
     }
 }
 

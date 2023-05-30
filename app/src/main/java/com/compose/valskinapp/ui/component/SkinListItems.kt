@@ -23,15 +23,10 @@ import com.compose.valskinapp.ui.theme.ValSkinAppTheme
 
 @Composable
 fun SkinListItem(
-    name: String,
-    photoUrl: String,
-    price: String,
-    modifier: Modifier = Modifier
+    name: String, photoUrl: String, price: String, modifier: Modifier = Modifier
 ) {
     Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-            .padding(12.dp)
+        verticalAlignment = Alignment.CenterVertically, modifier = modifier.padding(12.dp)
 
     ) {
         AsyncImage(
@@ -48,9 +43,7 @@ fun SkinListItem(
                 .padding(start = 16.dp, end = 8.dp)
         ) {
             Text(
-                text = name,
-                fontWeight = FontWeight.Medium,
-                style = MaterialTheme.typography.body1
+                text = name, fontWeight = FontWeight.Medium, style = MaterialTheme.typography.body1
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(

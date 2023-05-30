@@ -14,12 +14,10 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun BundleHeader(
-    char: Char,
-    modifier: Modifier = Modifier
+    char: Char, modifier: Modifier = Modifier
 ) {
     Surface(
-        color = MaterialTheme.colors.primary,
-        modifier = modifier
+        color = MaterialTheme.colors.primary, modifier = modifier
     ) {
         Text(
             text = char.toString(),
